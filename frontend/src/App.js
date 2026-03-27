@@ -14,15 +14,12 @@ import { useOrders } from './hooks/useOrders';
 const App = () => {
   const [activeTab, setActiveTab] = useState('users');
 
-  // Пользователи
   const { users, loading: usersLoading, error: usersError, success: usersSuccess, createUser, updateUser, deleteUser } = useUsers();
   const [editingUser, setEditingUser] = useState(null);
 
-  // Товары
   const { products, loading: productsLoading, error: productsError, success: productsSuccess, createProduct, updateProduct, deleteProduct } = useProducts();
   const [editingProduct, setEditingProduct] = useState(null);
 
-  // Заказы
   const { orders, loading: ordersLoading, error: ordersError, success: ordersSuccess, createOrder, updateOrderStatus, deleteOrder } = useOrders();
   const [showOrderForm, setShowOrderForm] = useState(false);
 
@@ -51,7 +48,6 @@ const App = () => {
   const handleOrderStatusUpdate = (id, input) => updateOrderStatus(id, input);
   const handleOrderDelete = (id) => deleteOrder(id);
 
-  // Исправленное условие загрузки
   const isLoading = (activeTab === 'users' && users.length === 0 && usersLoading) ||
       (activeTab === 'products' && products.length === 0 && productsLoading) ||
       (activeTab === 'orders' && orders.length === 0 && ordersLoading);

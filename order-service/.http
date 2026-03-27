@@ -33,10 +33,10 @@ Content-Type: application/json
   "query": "mutation($input: CreateOrderInput!) { createOrder(input: $input) { id userId status totalAmount } }",
   "variables": {
     "input": {
-      "userId": "user123",
+      "userId": "1",
       "items": [
         {
-          "productId": "p1",
+          "productId": "2",
           "quantity": 2,
           "price": 10.5
         }
