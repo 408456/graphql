@@ -90,6 +90,12 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.apollographql.federation</groupId>
+            <artifactId>federation-graphql-java-support</artifactId>
+            <version>5.1.0</version> <!-- последняя версия на март 2026 -->
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
