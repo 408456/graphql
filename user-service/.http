@@ -1,0 +1,52 @@
+###
+# curl -X POST http://localhost:4010/graphql
+#  -H "Content-Type: application/json"
+#  -d '{"query":"mutation { createUser(input: {email: \"test@example.com\", name: \"Test User\"}) { id email name createdAt updatedAt } }"}'
+# Создать пользователя
+POST http://localhost:4010/graphql
+Content-Type: application/json
+
+{
+  "query": "mutation { createUser(input: {email: \"test@example.com\", name: \"Test User\"}) { id email name createdAt updatedAt } }"
+}
+
+###
+
+# curl -X POST http://localhost:4010/graphql
+#  -H "Content-Type: application/json"
+#  -d '{"query":"query { users { id email name } }"}'
+# Получить список всех пользователей
+POST http://localhost:4010/graphql
+Content-Type: application/json
+
+{
+  "query": "query { users { id email name } }"
+}
+
+###
+# curl -X POST http://localhost:4010/graphql
+#  -H "Content-Type: application/json"
+#  -d '{"query":"query { user(id: 1) { id email name } }"}'
+# Обновление пользователя
+POST http://localhost:4010/graphql
+Content-Type: application/json
+
+{
+  "query": "query { user(id: 1) { id email name } }"
+}
+
+###
+
+
+# curl -X POST http://localhost:4010/graphql
+#  -H "Content-Type: application/json"
+#  -d '{"query":"mutation { deleteUser(id: 1) }"}'
+# Удалить пользователя
+POST http://localhost:4010/graphql
+Content-Type: application/json
+
+{
+  "query": "mutation { deleteUser(id: 1) }"
+}
+
+###

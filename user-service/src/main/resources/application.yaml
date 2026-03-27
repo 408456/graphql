@@ -1,0 +1,23 @@
+server:
+  port: 4010
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/graphql_userservice
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  graphql:
+    graphiql:
+      enabled: true   # http://localhost:4010/graphiql
+
+
+graphql:
+  federation:
+    enabled: true
