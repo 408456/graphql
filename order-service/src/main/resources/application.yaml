@@ -1,0 +1,16 @@
+server:
+  port: 4020
+
+spring:
+  application:
+    name: order-service
+  data:
+    mongodb:
+      uri: mongodb://admin:admin123@localhost:27017/orders_db
+  graphql:
+    graphiql:
+      enabled: true   # http://localhost:4020/graphiql
+
+graphql:
+  federation:
+    enabled: true

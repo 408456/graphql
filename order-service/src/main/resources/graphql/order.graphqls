@@ -1,0 +1,58 @@
+type User @key(fields: "id") {
+    id: ID! @external
+}
+
+extend type User {
+    orders: [Order!]!
+}
+
+type Order {
+    id: ID!
+    userId: ID!
+    status: OrderStatus!
+    totalAmount: Float!
+    createdAt: String!
+    updatedAt: String!
+    items: [OrderItem!]!
+}
+
+type OrderItem {
+    productId: ID!
+    quantity: Int!
+    price: Float!
+}
+
+enum OrderStatus {
+    PENDING
+    PROCESSING
+    SHIPPED
+    DELIVERED
+    CANCELLED
+}
+
+input OrderItemInput {
+    productId: ID!
+    quantity: Int!
+    price: Float!
+}
+
+input CreateOrderInput {
+    userId: ID!
+    items: [OrderItemInput!]!
+}
+
+input UpdateOrderStatusInput {
+    status: OrderStatus!
+}
+
+type Query {
+    order(id: ID!): Order
+    orders: [Order!]!
+    ordersByUser(userId: ID!): [Order!]!
+}
+
+type Mutation {
+    createOrder(input: CreateOrderInput!): Order!
+    updateOrderStatus(id: ID!, input: UpdateOrderStatusInput!): Order!
+    deleteOrder(id: ID!): Boolean!
+}
