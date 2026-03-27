@@ -7,7 +7,7 @@ const gateway = new ApolloGateway({
         subgraphs: [
             { name: 'users', url: 'http://localhost:4010/graphql' },
             { name: 'orders', url: 'http://localhost:4020/graphql' },
-            // { name: 'orders', url: 'http://localhost:4030/graphql' },
+            { name: 'products', url: 'http://localhost:4030/graphql' },
         ],
     }),
 });

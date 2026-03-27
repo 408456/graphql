@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { validateUser } from '../utils/validation';
+import { validateUser } from '../../utils/validation';
 import { styles } from './UserForm.styles';
 
 const UserForm = ({ user, onSubmit, onCancel, loading }) => {

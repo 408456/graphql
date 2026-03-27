@@ -1,0 +1,126 @@
+export const styles = {
+    container: {
+        backgroundColor: 'white',
+        borderRadius: '12px',
+        overflow: 'hidden',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+    },
+    header: {
+        padding: '20px 24px',
+        borderBottom: '1px solid #e5e7eb',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    title: {
+        fontSize: '20px',
+        fontWeight: '600',
+        color: '#1f2937',
+        margin: 0,
+    },
+    count: {
+        fontSize: '14px',
+        color: '#6b7280',
+        backgroundColor: '#f3f4f6',
+        padding: '4px 12px',
+        borderRadius: '20px',
+    },
+    tableWrapper: {
+        overflowX: 'auto',
+    },
+    table: {
+        width: '100%',
+        borderCollapse: 'collapse',
+    },
+    tableHeader: {
+        backgroundColor: '#f9fafb',
+        borderBottom: '1px solid #e5e7eb',
+    },
+    th: {
+        padding: '12px 16px',
+        textAlign: 'left',
+        fontSize: '14px',
+        fontWeight: '600',
+        color: '#374151',
+    },
+    td: {
+        padding: '16px',
+        fontSize: '14px',
+        color: '#1f2937',
+        borderBottom: '1px solid #f3f4f6',
+    },
+    rowEven: {
+        backgroundColor: 'white',
+    },
+    rowOdd: {
+        backgroundColor: '#f9fafb',
+    },
+    emptyState: {
+        textAlign: 'center',
+        padding: '48px',
+        color: '#9ca3af',
+    },
+    emptyIcon: {
+        fontSize: '48px',
+        marginBottom: '16px',
+    },
+    idBadge: {
+        fontFamily: 'monospace',
+        fontSize: '13px',
+        backgroundColor: '#f3f4f6',
+        padding: '2px 8px',
+        borderRadius: '12px',
+        display: 'inline-block',
+    },
+    productName: {
+        fontWeight: '500',
+    },
+    productDescription: {
+        fontSize: '12px',
+        color: '#6b7280',
+        marginTop: '4px',
+    },
+    priceBadge: {
+        fontWeight: '600',
+        color: '#10b981',
+    },
+    stockBadge: {
+        padding: '2px 8px',
+        borderRadius: '12px',
+        fontSize: '12px',
+        fontWeight: '500',
+        backgroundColor: '#d1fae5',
+        color: '#065f46',
+    },
+    stockBadgeLow: {
+        padding: '2px 8px',
+        borderRadius: '12px',
+        fontSize: '12px',
+        fontWeight: '500',
+        backgroundColor: '#fee2e2',
+        color: '#991b1b',
+    },
+    actions: {
+        display: 'flex',
+        gap: '8px',
+    },
+    editBtn: {
+        padding: '6px 12px',
+        fontSize: '12px',
+        backgroundColor: '#f3f4f6',
+        border: 'none',
+        borderRadius: '6px',
+        cursor: 'pointer',
+        transition: 'background-color 0.2s',
+    },
+    deleteBtn: {
+        padding: '6px 12px',
+        fontSize: '12px',
+        backgroundColor: '#fee2e2',
+        border: 'none',
+        borderRadius: '6px',
+        color: '#dc2626',
+        cursor: 'pointer',
+        transition: 'background-color 0.2s',
+    },
+};

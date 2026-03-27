@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { formatDate } from '../utils/date';
+import React from 'react';
+import { formatDate } from '../../utils/date'; // ← исправленный путь
 import { styles } from './UserList.styles';
 
 const UserList = ({ users, onEdit, onDelete, loading }) => {
@@ -15,7 +15,6 @@ const UserList = ({ users, onEdit, onDelete, loading }) => {
                 <h2 style={styles.title}>Список пользователей</h2>
                 <div style={styles.count}>{users.length} пользователей</div>
             </div>
-
             <div style={styles.tableWrapper}>
                 <table style={styles.table}>
                     <thead>

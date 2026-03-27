@@ -1,0 +1,22 @@
+server:
+  port: 4030
+
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/graphql_productservice
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  graphql:
+    graphiql:
+      enabled: true
+
+graphql:
+  federation:
+    enabled: true

@@ -1,0 +1,30 @@
+###
+# curl -X POST http://localhost:4030/graphql
+#  -H "Content-Type: application/json"
+#  -d '{
+#    "query": "mutation($input: ProductInput!) { createProduct(input: $input) { id name description price stock createdAt updatedAt } }",
+#    "variables": {
+#      "input": {
+#        "name": "Ноутбук",
+#        "description": "Мощный игровой ноутбук",
+#        "price": 999.99,
+#        "stock": 10
+#      }
+#    }
+#  }'
+POST http://localhost:4030/graphql
+Content-Type: application/json
+
+{
+  "query": "mutation($input: ProductInput!) { createProduct(input: $input) { id name description price stock createdAt updatedAt } }",
+  "variables": {
+    "input": {
+      "name": "Ноутбук",
+      "description": "Мощный игровой ноутбук",
+      "price": 999.99,
+      "stock": 10
+    }
+  }
+}
+
+###

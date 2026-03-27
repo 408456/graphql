@@ -1,0 +1,27 @@
+type Product @key(fields: "id") {
+    id: ID!
+    name: String!
+    description: String!
+    price: Float!
+    stock: Int!
+    createdAt: String!
+    updatedAt: String!
+}
+
+input ProductInput {
+    name: String!
+    description: String!
+    price: Float!
+    stock: Int!
+}
+
+type Query {
+    product(id: ID!): Product
+    products: [Product!]!
+}
+
+type Mutation {
+    createProduct(input: ProductInput!): Product!
+    updateProduct(id: ID!, input: ProductInput!): Product!
+    deleteProduct(id: ID!): Boolean!
+}
